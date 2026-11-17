@@ -21,6 +21,20 @@ over Telink SWS with an ESP32.
 | `research/` | Probe scripts, protocol refs, upstream reference code |
 | `photos/` | Board and wiring photos |
 
-## Latest findings (2026-11-17)
-- pvvx `BTH_allsensors_v59.bin` was verified byte-correct on chip (per-sector CRC), but the CPU parks at PC 0x0d0 after a SWS-stall resume, and is silent after cold boot.
-- Stock firmware was re-flashed (verified) — and it **also** does not advertise, on ESP power or on coin cell. So the problem is not the pvvx image; suspect the MAC/RF-cal sector 0x76000 (whole-sector CRC differs from backup; first 8 bytes match) or board/battery.
+## Status (2026-11-17): WORKING
+`fw/YANMI_v59.bin` (pvvx v5.9, `DEVICE_ZBEACON2TH01_SHTC3` config retargeted, see
+`patches/pvvx-ATC_MiThermometer-app_config.patch`) advertises BTHome v2 (UUID 0xFCD2)
+as `ATC_CB81A7` with temperature, humidity and battery.
+
+Board facts (Yanmi VCH6043-V03, TLSR8253):
+- Sensor: **SHTC3 at I2C 0x70, SCL = PA7 (the SWS pad), SDA = PC5** (found with
+  `test-fw/i2cscan.c`). No stock pvvx build uses these pins, which is why all of them failed.
+- pvvx's software I2C (no `I2C_GROUP`) supports arbitrary pins.
+- LCD controller: not on that I2C bus; display not yet supported (display disabled).
+- Firmware that uses PA7 kills SWS right after boot; the activation (reset + stall) still
+  catches it. Flash with `tools/flash.py` (`--late` for images that grab PA7 instantly).
+- Resuming the CPU from an SWS stall (0x602=0x88) does NOT really run it; PC reads 0x0d0
+  regardless. Test run-state only with a real cold boot (`RST`) then `A 0`.
+
+Test firmware: `test-fw/counter.S` (SRAM counter) and `test-fw/i2cscan.c` (I2C pin/address scan),
+built with the TC32 toolchain from the pvvx SDK.

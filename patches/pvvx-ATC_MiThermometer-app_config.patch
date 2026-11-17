@@ -1,5 +1,5 @@
 diff --git a/src/app_config.h b/src/app_config.h
-index e1013cd..a8794c8 100644
+index e1013cd..0903205 100644
 --- a/src/app_config.h
 +++ b/src/app_config.h
 @@ -781,12 +781,12 @@ extern "C" {
@@ -21,3 +21,36 @@ index e1013cd..a8794c8 100644
  
  #if  	USE_RC_VBAT // Vbat (+V-R/RC-GND)
  #define SHL_ADC_VBAT		B5P  // "B5P" in adc.h
+@@ -2936,19 +2936,19 @@ GPIO_D7 - SDA
+ #define PB0_FUNC                AS_GPIO
+ 
+ #define I2C_MAX_SPEED           200000
+-#define I2C_SCL                 GPIO_PA0
+-#define PA0_INPUT_ENABLE        1
+-#define PA0_DATA_OUT            0
+-#define PA0_OUTPUT_ENABLE       0
+-#define PULL_WAKEUP_SRC_PA0     PM_PIN_PULLUP_10K
+-#define PA0_FUNC            AS_GPIO
+-
+-#define I2C_SDA                 GPIO_PD4
+-#define PD4_INPUT_ENABLE        1
+-#define PD4_DATA_OUT            0
+-#define PD4_OUTPUT_ENABLE       0
+-#define PULL_WAKEUP_SRC_PD4     PM_PIN_PULLUP_10K
+-#define PD4_FUNC            AS_GPIO
++#define I2C_SCL                 GPIO_PA7 // Yanmi VCH6043-V03: SCL is the SWS pad
++#define PA7_INPUT_ENABLE        1
++#define PA7_DATA_OUT            0
++#define PA7_OUTPUT_ENABLE       0
++#define PULL_WAKEUP_SRC_PA7     PM_PIN_PULLUP_10K
++#define PA7_FUNC                AS_GPIO
++
++#define I2C_SDA                 GPIO_PC5 // Yanmi VCH6043-V03 (SHTC3 found at 0x70)
++#define PC5_INPUT_ENABLE        1
++#define PC5_DATA_OUT            0
++#define PC5_OUTPUT_ENABLE       0
++#define PULL_WAKEUP_SRC_PC5     PM_PIN_PULLUP_10K
++#define PC5_FUNC                AS_GPIO
+ 
+ #define GPIO_KEY2               GPIO_PB7
+ #define PB7_INPUT_ENABLE        1
