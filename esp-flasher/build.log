@@ -1,0 +1,108 @@
+********************************************************************************
+If you like PlatformIO, please:
+- star it on GitHub > https://github.com/platformio/platformio-core
+- follow us on LinkedIn to stay up-to-date on the latest project news > https://www.linkedin.com/company/platformio/
+- try PlatformIO IDE for embedded development > https://platformio.org/platformio-ide
+********************************************************************************
+
+Processing esp32 (board: esp32dev; platform: espressif32@^6.9.0; framework: arduino)
+--------------------------------------------------------------------------------
+Platform Manager: Installing espressif32 @ ^6.9.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Platform Manager: espressif32@6.13.0 has been installed!
+Tool Manager: Installing espressif/toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: toolchain-xtensa-esp32@8.4.0+2021r2-patch5 has been installed!
+Tool Manager: Installing platformio/framework-arduinoespressif32 @ ~3.20017.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: framework-arduinoespressif32@3.20017.241212+sha.dcc1105b has been installed!
+Tool Manager: Installing platformio/tool-esptoolpy @ ~2.41100.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Collecting cryptography~=46.0.0
+  Downloading cryptography-46.0.7-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Collecting ecdsa~=0.19.1
+  Downloading ecdsa-0.19.2-py2.py3-none-any.whl.metadata (29 kB)
+Collecting bitstring~=4.3.1
+  Downloading bitstring-4.3.1-py3-none-any.whl.metadata (5.3 kB)
+Collecting reedsolo~=1.7.0
+  Downloading reedsolo-1.7.0-py3-none-any.whl.metadata (23 kB)
+Collecting intelhex~=2.3.0
+  Downloading intelhex-2.3.0-py2.py3-none-any.whl.metadata (2.7 kB)
+Collecting cffi>=2.0.0 (from cryptography~=46.0.0)
+  Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Collecting six>=1.9.0 (from ecdsa~=0.19.1)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting bitarray<4.0,>=3.0.0 (from bitstring~=4.3.1)
+  Downloading bitarray-3.12.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography~=46.0.0)
+  Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+Downloading cryptography-46.0.7-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 1.4 MB/s  0:00:03
+Downloading ecdsa-0.19.2-py2.py3-none-any.whl (150 kB)
+Downloading bitstring-4.3.1-py3-none-any.whl (71 kB)
+Downloading reedsolo-1.7.0-py3-none-any.whl (32 kB)
+Downloading intelhex-2.3.0-py2.py3-none-any.whl (50 kB)
+Downloading bitarray-3.12.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (405 kB)
+Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+Installing collected packages: reedsolo, intelhex, six, pycparser, bitarray, ecdsa, cffi, bitstring, cryptography
+
+Successfully installed bitarray-3.12.4 bitstring-4.3.1 cffi-2.1.1 cryptography-46.0.7 ecdsa-0.19.2 intelhex-2.3.0 pycparser-3.12 reedsolo-1.7.0 six-1.17.0
+Tool Manager: tool-esptoolpy@2.41100.260830 has been installed!
+Tool Manager: Installing platformio/tool-scons @ ~4.41101.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: tool-scons@4.41101.0 has been installed!
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (6.13.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.41100.260830 (4.11.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 33 compatible libraries
+Scanning dependencies...
+No dependencies
+Building in release mode
+Compiling .pio/build/esp32/src/main.cpp.o
+Building .pio/build/esp32/bootloader.bin
+Generating partitions .pio/build/esp32/partitions.bin
+Compiling .pio/build/esp32/FrameworkArduino/Esp.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/FirmwareMSC.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/FunctionalInterrupt.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/HWCDC.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/HardwareSerial.cpp.o
+esptool.py v4.11.0
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+Compiling .pio/build/esp32/FrameworkArduino/IPAddress.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/IPv6Address.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/MD5Builder.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/Print.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/Stream.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/StreamString.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/Tone.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/USB.cpp.o
+src/main.cpp:21:10: fatal error: driver/rmt_rx.h: No such file or directory
+ #include "driver/rmt_rx.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+Compiling .pio/build/esp32/FrameworkArduino/USBCDC.cpp.o
+Compiling .pio/build/esp32/FrameworkArduino/USBMSC.cpp.o
+*** [.pio/build/esp32/src/main.cpp.o] Error 1
+========================= [FAILED] Took 320.38 seconds =========================
+
+Environment    Status    Duration
+-------------  --------  ------------
+esp32          FAILED    00:05:20.381
+==================== 1 failed, 0 succeeded in 00:05:20.381 ====================

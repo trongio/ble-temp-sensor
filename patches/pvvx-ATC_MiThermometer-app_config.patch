@@ -1,0 +1,23 @@
+diff --git a/src/app_config.h b/src/app_config.h
+index e1013cd..a8794c8 100644
+--- a/src/app_config.h
++++ b/src/app_config.h
+@@ -781,12 +781,12 @@ extern "C" {
+ #define USE_RC_VBAT			1
+ #define USE_EPD				0 // min update time ms
+ 
+-#define USE_SENSOR_CHT8305		0
+-#define USE_SENSOR_CHT8215		0
+-#define USE_SENSOR_AHT20_30		0
+-#define USE_SENSOR_SHT4X		1
+-#define USE_SENSOR_SHTC3		0
+-#define USE_SENSOR_SHT30		0
++#define USE_SENSOR_CHT8305	1
++#define USE_SENSOR_CHT8215	1
++#define USE_SENSOR_AHT20_30	1
++#define USE_SENSOR_SHT4X	1
++#define USE_SENSOR_SHTC3	1
++#define USE_SENSOR_SHT30	1
+ 
+ #if  	USE_RC_VBAT // Vbat (+V-R/RC-GND)
+ #define SHL_ADC_VBAT		B5P  // "B5P" in adc.h
